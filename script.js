@@ -23,8 +23,7 @@ function randomColor() {
 
 let squareDivs = document.querySelectorAll('.square');
 squareDivs.forEach(box => {
-    box.onmouseover = () => 
-    {       
-            return box.style.backgroundColor = randomColor();;
-        }
+    box.addEventListener("mouseover", function() {
+        return box.style.backgroundColor = randomColor();
+    })
 })
