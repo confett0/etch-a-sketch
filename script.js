@@ -1,7 +1,7 @@
 // Etch a Sketch
 
 let grid = document.querySelector('.container');
-let numOfSquares = 256;
+let numOfSquares = 3600;
 
 
 function createGrid(num) {
@@ -10,8 +10,8 @@ function createGrid(num) {
         square.className = 'square';
         grid.appendChild(square);
         let rowNumber = Math.sqrt(num);
-        grid.style.setProperty("grid-template-rows","repeat(16, 1fr)");
-        grid.style.setProperty("grid-template-columns","repeat(16, 1fr)");
+        grid.style.gridTemplateRows = `repeat(${rowNumber}, 1fr)`;
+        grid.style.gridTemplateColumns = `repeat(${rowNumber}, 1fr)`;
 
     }
 }
