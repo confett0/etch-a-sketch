@@ -9,6 +9,10 @@ function createGrid(num) {
         let square = document.createElement('div');
         square.className = 'square';
         grid.appendChild(square);
+        let rowNumber = Math.sqrt(num);
+        grid.style.setProperty("grid-template-rows","repeat(16, 1fr)");
+        grid.style.setProperty("grid-template-columns","repeat(16, 1fr)");
+
     }
 }
 
@@ -27,3 +31,9 @@ squareDivs.forEach(box => {
         return box.style.backgroundColor = randomColor();
     })
 })
+
+function clearDiv() {
+    squareDivs.forEach(box => {
+           return box.style.backgroundColor = "white";
+        })
+}
