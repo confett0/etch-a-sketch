@@ -36,3 +36,5 @@ function clearDiv() {
            return box.style.backgroundColor = "white";
         })
 }
+
+document.getElementById('clear').addEventListener('click',clearDiv);
