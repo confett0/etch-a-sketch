@@ -42,7 +42,8 @@ h1 {
 }
 
 .square {
-    border: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
     background-color: #fff;
 }
 

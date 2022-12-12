@@ -1,7 +1,25 @@
 // Etch a Sketch
 
-let grid = document.querySelector('.container');
+const grid = document.querySelector('.container');
+const black = document.getElementById('black');
+const rainbow = document.getElementById('rainbow');
+let blackMode = true;
+let rainbowMode;
 let numOfSquares = 60;
+
+black.addEventListener('click', function()
+{
+    rainbowMode = false;
+    return blackMode = true;
+}
+)
+
+rainbow.addEventListener('click', function()
+{   
+    blackMode = false;
+    return rainbowMode = true;
+}
+)
 
 
 function createGrid(num) {
@@ -27,9 +45,15 @@ function randomColor() {
 let squareDivs = document.querySelectorAll('.square');
 squareDivs.forEach(box => {
     box.addEventListener("mouseover", function() {
+        if (rainbowMode) {
         return box.style.backgroundColor = randomColor();
+    } else {
+        return box.style.backgroundColor = 'black';
+    }
     })
 })
+
+// Clear grid
 
 function clearDiv() {
     squareDivs.forEach(box => {
