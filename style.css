@@ -35,7 +35,6 @@ h1 {
 .container {
     border: 1px solid #141414;
     display: grid;
-    flex: 1;
     margin: 20px auto;
     width: 700px;
     height: 700px;
@@ -48,15 +47,30 @@ h1 {
 }
 
 .button {
-    color: #fff;
     background-color: #141414;
     border: none;
-    margin: 20px auto;
-    width: 100px;
+    color: #fff;
+    cursor: pointer;
     height: 40px;
     text-align: center;
 }
 
+.button:hover {
+    background-color: #008387;
+}
+
+.button.tool {
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+}
+
+.button.size {
+    border-radius: 15px;
+    width: 70px;
+}
+
 footer {
+    text-align: center;
     width: 100%;
 }
