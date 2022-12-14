@@ -10,27 +10,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0fe47b762d.js" crossorigin="anonymous"></script>
     <script src="./script.js" defer></script>
 </head>
 
 <body>
+    <h1>Etch-a-Sketch</h1>
     <div class="main">
         <div class="sidebar">
-            <h1>Etch-a-Sketch</h1>
-            <button id="black" class="button tool">Black</button>
-            <button id="rainbow" class="button tool">Rainbow</button>
-            <button id="eraser" class="button tool">Eraser</button>
-            <button id="clear" class="button tool">Clear</button>
-            <button id="big" class="button size big">16 x 16</button>
-            <button id="medium" class="button size medium">32 x 32</button>
-            <button id="small" class="button size small">64 x 64</button>
-
+            <button id="black" class="button tool" title="black"><i class="fa-solid fa-pen fa-2xl"></i></button>
+            <button id="rainbow" class="button tool" title="rainbow"><i class="fa-solid fa-rainbow fa-2xl"></i></button>
+            <button id="eraser" class="button tool" title="eraser"><i class="fa-solid fa-eraser fa-2xl"></i></button>
+            <button id="clear" class="button tool" title="clear"><i class="fa-solid fa-trash fa-2xl"></i></button>
+            <div class="size-buttons">
+                <button id="big" class="button size big">16 x 16</button>
+                <button id="medium" class="button size medium">32 x 32</button>
+                <button id="small" class="button size small">64 x 64</button>
+            </div>
         </div>
         <div class="content">
             <div class="container"></div>
         </div>
     </div>
-    <footer>Copyright</footer>
+    <footer>
+        <p>Copyright © <a href="https://github.com/confett0" target="_blank">confetto</a></p>
+    </footer>
 </body>
 
 </html>

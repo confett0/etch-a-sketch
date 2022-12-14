@@ -5,31 +5,31 @@
 }
 
 body {
-    background-color: #d5fff1;
+    background-color: #008387;
     display: flex;
     flex-direction: column;
+    font-family: Helvetica, sans-serif;
+    min-height: 100vh;
 }
 
 .main {
     display: flex;
     flex: 1;
     padding: 20px 25px;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 h1 {
+    color: #ffe608;
     font-family: 'Yeseva One';
-    font-size: 2.5em;
-    margin-bottom: 30px;
-}
-
-.sidebar {
-    width: 25%;
+    font-size: 3em;
+    margin: 15px 0 10px;
     text-align: center;
 }
 
-.content {
-    width: 75%;
+.sidebar {
+    width: 200px;
+    text-align: center;
 }
 
 .container {
@@ -51,26 +51,88 @@ h1 {
     border: none;
     color: #fff;
     cursor: pointer;
-    height: 40px;
+    display: block;
     text-align: center;
 }
 
 .button:hover {
-    background-color: #008387;
+    background-color: #ffe608;
+    color: #141414;
 }
 
 .button.tool {
-    display: block;
-    margin: 20px auto;
+    margin: 30px auto;
     width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
 
 .button.size {
-    border-radius: 15px;
+    border-radius: 25px;
+    height: 45px;
     width: 70px;
+    margin: 20px auto;
 }
 
 footer {
-    text-align: center;
+    background-color: #141414;
+    color: #fff;
+    max-height: 2.5em;
     width: 100%;
+}
+
+footer p {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+@media screen and (max-width: 850px) {
+    
+    .main {
+        flex-direction: column-reverse;
+        justify-content:flex-end;
+        padding: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .button {
+        display: inline;
+        margin: 30px 2%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .container {
+        width: 600px;
+        height: 600px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .container {
+        width: 450px;
+        height: 450px;
+    }
+
+    .button.tool {
+        width: 80px;
+        height: 80px;
+    }
+}
+@media screen and (max-width: 470px) {
+
+    .container {
+        width: 350px;
+        height: 350px;
+    }
+
+    .button.tool {
+        width: 60px;
+        height: 60px;
+    }
 }
